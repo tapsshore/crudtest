@@ -2,7 +2,6 @@ package com.crudtest.crudtest.service;
 
 import com.crudtest.crudtest.domain.Employee;
 import com.crudtest.crudtest.repository.EmployeeRepository;
-import org.springframework.boot.context.config.ConfigDataResourceNotFoundException;
 
 import java.util.List;
 import java.util.Optional;
