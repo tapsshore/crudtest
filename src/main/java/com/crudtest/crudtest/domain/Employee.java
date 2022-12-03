@@ -2,11 +2,13 @@ package com.crudtest.crudtest.domain;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 
 @Setter
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
+@EnableAutoConfiguration
 @Builder
 @Entity
 @Table(name = "employees")
