@@ -6,7 +6,7 @@ import com.crudtest.crudtest.repository.EmployeeRepository;
 import java.util.List;
 import java.util.Optional;
 
-public class EmployeeServiceImpl implements EmployeeService{
+public class EmployeeServiceImpl implements EmployeeService {
     private EmployeeRepository employeeRepository;
 
     public EmployeeServiceImpl(EmployeeRepository employeeRepository) {
@@ -15,8 +15,8 @@ public class EmployeeServiceImpl implements EmployeeService{
 
     @Override
     public Employee saveEmployee(Employee employee) throws Exception {
-        Optional<Employee> savedEmployee=employeeRepository.findByEmail(employee.getEmail());
-        if (savedEmployee.isPresent()){
+        Optional<Employee> savedEmployee = employeeRepository.findByEmail(employee.getEmail());
+        if (savedEmployee.isPresent()) {
             throw new Exception("Employee with email : " + employee.getEmail() + "  already exists");
         }
         return employeeRepository.save(employee);
