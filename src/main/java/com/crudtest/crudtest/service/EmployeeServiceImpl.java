@@ -17,7 +17,7 @@ public class EmployeeServiceImpl implements EmployeeService{
     public Employee saveEmployee(Employee employee) throws Exception {
         Optional<Employee> savedEmployee=employeeRepository.findByEmail(employee.getEmail());
         if (savedEmployee.isPresent()){
-            throw new Exception("Employee already exists" + employee.getEmail());
+            throw new Exception("Employee with email : " + employee.getEmail() + "  already exists");
         }
         return employeeRepository.save(employee);
     }
